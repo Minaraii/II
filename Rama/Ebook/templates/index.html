@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>{{ translations['title'] }}</title>
+</head>
+<body>
+    <div id="splash-screen">
+        <h1 id="loading-text">Aum...</h1>
+        <div id="yin-yang" class="hidden">🍜</div> <!-- Emoji Yin-Yang -->
+    </div>
+    
+    <div id="main-content" style="display:none;">
+        <button id="start-button" class="hidden">Start</button>
+    </div>
+
+    <header>
+        <div class="header_content">
+            <h1 class="titulo">{{ translations['title'] }}</h1>
+            <div class="botones">
+                <button class="switch-theme">{{ translations['change_theme'] }}</button>
+                <button class="switch-language">{{ translations['change_language'] }}</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="contenido">
+            <h3>{{ translations['welcome'] }}</h3>
+            <p>{{ translations['explore'] }}</p>
+        </section>
+        
+        <section id="upload_section">
+            <h3>{{ translations['upload_title'] }}</h3>
+            <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+                <input type="file" id="fileInput" name="fileInput" accept=".txt, .pdf">
+                <button type="submit">Cargado</button>
+                <p id="uploadMessage">...</p>
+            </form>
+        </section>
+        
+        <section id="pdf_section" style="display:none;">
+            <h3>Libro Cargado Exitosamente</h3>
+            <iframe id="pdfViewer" style="width:100%; height:500px;" frameborder="0"></iframe>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#Contacto">Contacto</a>
+            <a href="#Donacion">Donación</a>
+            <a href="#Productos">Productos</a>
+        </div>
+        <p>© 2024 Rama - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,51 +1,3 @@
-ls ~/.ssh/id_ed25519.pub
-ssh-keygen -t ed25519
-ls ~/.ssh/id_ed25519.pub
-cat ~/.ssh/id_ed25519.pub
-ssh -T git@github.com
-clean
-clear
-ls
-mkdir KRISHNA
-cd KRISHNA/
-git clone git@github.com:shivako-IA/KRISHNA-.git
-git remote -v
-cd
-git remote -v
-cd KRISHNA/
-git remote -v
-touch hello_krishna.txt 
-git status
-ls
-git clone git@github.com:shivako-IA/KRISHNA-.git 
-git remote -v
-cd
-rm -rf KRISHNA-
-ls
-cd KRISHNA/
-rm -rf KRISHNA-
-CD
-cd
-ls
-rm -rf KRISHNA
-ls
-mkdir KRISHNA 
-cd KRISHNA/
-git clone git@github.com:shivako-IA/KRISHNA-.git
-git remote -v
-git init 
-cd
-ls
-rm -rf ~/KRISHNA
-ls
-mkdir KRISHNA
-cd KRISHNA/
-git clone git@github.com:shivako-IA/krishna-.git
-git remote -v
-ls -la
-cd ..
-rm -rf krishna-
-git clone git@github.com:shivako-IA/KRISHNA-.git
 cd KRISHNA
 git init 
 git remote add origin git@github.com:shivako-IA/krishna-.git 
@@ -497,4 +449,52 @@ alias ls='ls --color=auto'
 ls
 ls
 alias ls='ls --color=auto'
+ls
+ls
+cd Krishna/
+ls
+alias ls='ls --color=auto'
+ls
+mkdir Proyecto#1
+cd Proyecto#1/
+code . 
+ls
+code .
+mkdir imagenes
+touch index.html
+touch style.css
+touch script.js
+code .
+ls
+cd imagenes/
+ls
+cd
+cd Krishna/Proyecto#1/
+ls
+code .
+git status
+git add .
+git commit -m "proyecto#1"
+git pull origin main 
+git push origin main 
+git status
+cd
+cd Krishna/
+git add .
+git status
+git commit -m "proyecto#1"
+git pull origin main 
+git push origin main
+git status
+cd
+git status
+git add .
+git commit -m "proyecto#1"
+git pull origin main 
+git push origin main
+git status
+ls
+cd Krishna/
+ls
+cd Proyecto#1/
 ls

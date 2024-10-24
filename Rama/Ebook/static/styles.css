@@ -1,0 +1,235 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+    transition: background-color 0.5s, color 0.5s;
+    min-height: 100vh; /* Asegura que el body ocupe al menos el alto de la pantalla */
+    display: flex; /* Hacemos que body sea un contenedor flexible */
+    flex-direction: column; /* Colocamos los hijos en columna */
+    overflow: hidden; /* Evita el desplazamiento */
+}
+
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+    transition: opacity 1s ease;
+}
+
+#loading-text {
+    font-size: 2em;
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* Animación de entrada */
+}
+
+#ramen-icon {
+    font-size: 5em;
+    opacity: 0;
+    animation: bounce 1s 1s forwards; /* Efecto de rebote */
+}
+
+.hidden {
+    display: none; /* Oculta elementos */
+}
+
+#main-content {
+    display: none; /* Oculta el contenido principal al inicio */
+    text-align: center;
+}
+
+#start-button {
+    font-size: 1.5em;
+    padding: 10px 20px;
+    opacity: 0;
+    animation: fadeIn 1s 2s forwards; /* Muestra el botón después de un tiempo */
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+header {
+    background-color: #fff;
+    padding: 10px;
+    border-bottom: 2px solid #000;
+    width: 100%;
+}
+
+.header_content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.titulo {
+    font-size: 33px;
+    font-family: 'Nombre de la fuente elegida', Cinzel Decorative;
+    margin: 0;
+    color: #1E90FF; /* Azul para el modo claro */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .titulo {
+    color: #ffffff; /* Blanco para el modo oscuro */
+}
+
+.botones {
+    display: flex;
+}
+
+.btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 7px 13px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+main {
+    padding: 20px; 
+    text-align: center;
+    flex: 1; /* Permite que main ocupe el espacio disponible */
+}
+
+#upload_section, 
+#pdf_section {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 400px; /* Corregido de max-width */
+    margin: 30px auto;
+    text-align: left;
+}
+
+/* Cambia el color de los encabezados en el modo claro */
+#upload_section h3, 
+#pdf_section h3 {
+    margin-top: 0;
+    color: #007bff; /* Azul en modo claro */
+}
+
+/* Cambia el color de los encabezados en el modo oscuro */
+body.dark-mode #upload_section h3, 
+body.dark-mode #pdf_section h3 {
+    color: #fff; /* Blanco en modo oscuro */
+}
+
+#upload_section #uploadMessage {
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #007bff; /* Color de fondo atractivo */
+    color: #fff; /* Color de texto */
+    border-top: 5px solid #0056b3; /* Línea superior más gruesa */
+}
+
+.footer-links {
+    margin-bottom: 15px; /* Espacio entre los enlaces y el contenido */
+}
+
+.footer-links a {
+    color: #fff; /* Color de los enlaces */
+    margin: 0 10px; /* Espaciado horizontal entre enlaces */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* Negrita para los enlaces */
+    transition: color 0.3s; /* Transición para el color al pasar el mouse */
+}
+
+.footer-links a:hover {
+    color: #cce5ff; /* Color al pasar el mouse */
+}
+
+.footer-buttons {
+    margin: 10px 0; /* Espacio para los botones */
+}
+
+footer button.switch-theme,
+footer button.switch-language {
+    background-color: #0056b3; /* Color de fondo más oscuro para los botones */
+    color: white;
+    border: none;
+    padding: 10px 15px; /* Espaciado en los botones */
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px; /* Espaciado entre botones */
+    transition: background-color 0.3s, transform 0.2s; /* Transición suave */
+}
+
+footer button.switch-theme:hover,
+footer button.switch-language:hover {
+    background-color: #003d7a; /* Color al pasar el mouse */
+    transform: scale(1.05); /* Efecto de aumento */
+}
+
+/* Tema oscuro */
+body.dark-mode {
+    background-color: #333;
+    color: #f8f8f8;
+}
+
+body.dark-mode header, 
+body.dark-mode footer {
+    background-color: #444;
+    border-color: #777;
+}
+
+body.dark-mode .btn {
+    background-color: #444;
+    color: #f8f8f8;
+}
+
+body.dark-mode .btn:hover {
+    background-color: #222;
+}
+
+body.dark-mode #upload_section, 
+body.dark-mode #pdf_section {
+    background-color: #555;
+}
+
+/* Estilos para el mensaje en modo claro */
+#uploadMessage {
+    color: #333; /* Color negro para el tema claro */
+}
+
+/* Estilos para el mensaje en modo oscuro */
+body.dark-mode #uploadMessage {
+    color: rgb(244, 247, 105); /* Color amarillo para el tema oscuro */
+}
